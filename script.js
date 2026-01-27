@@ -1,5 +1,4 @@
-<script>
-    // Dark mode detection
+// Dark mode detection
     if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
       document.documentElement.classList.add('dark');
     }
@@ -741,4 +740,4 @@
         card.classList.toggle('selected', this.checked);
       });
     });
-  </script>
+  
