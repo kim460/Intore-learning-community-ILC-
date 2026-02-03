@@ -2,7 +2,7 @@
     :root {
       --color-terracotta: #C65D3B;
       --color-terracotta-dark: #A84A2B;
-      --color-sand: #F5EDE4;
+      --color-sand: #080808;
       --color-cream: #FBF8F4;
       --color-forest: #2D5A47;
       --color-forest-light: #3A7359;
@@ -273,7 +273,11 @@
       align-items: center;
       position: relative;
       overflow: hidden;
-      background: linear-gradient(135deg, var(--color-forest) 0%, #1E4035 50%, #152E26 100%);
+      /* background: linear-gradient(135deg, var(--color-forest) 0%, #1E4035 50%, #152E26 100%); */
+      background-image: url("image/2.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
     }
 
     .hero::before {
@@ -283,7 +287,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+      /* background: url("image/3.jpg"); */
       opacity: 0.5;
     }
 
@@ -309,7 +313,7 @@
     }
 
     .hero-title {
-      color: var(--color-white);
+      color: var(--color-charcoal);
       margin-bottom: 1.5rem;
       animation: fadeInUp 0.8s ease 0.1s forwards;
       opacity: 0;
@@ -321,7 +325,8 @@
 
     .hero-subtitle {
       font-size: 1.25rem;
-      color: rgba(255,255,255,0.85);
+      font-weight: 100px;
+      color: rgba(8, 8, 8);
       line-height: 1.8;
       margin-bottom: 2.5rem;
       max-width: 600px;
@@ -460,42 +465,49 @@
     }
 
     .about-image {
-      position: relative;
+      position: sticky;             
+      top: 6rem;                    
+      box-shadow:none;
+      width: 100%;
+      max-width: 480px;
+      align-self: start;
+      z-index: 2;
     }
 
     .about-image-main {
       width: 100%;
-      aspect-ratio: 4/3;
-      background: linear-gradient(135deg, var(--color-forest), var(--color-earth));
-      border-radius: 16px;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border-radius: 16px;           
       display: flex;
       align-items: center;
       justify-content: center;
       position: relative;
       overflow: hidden;
+      background: #fdf9f9;               
     }
-
     .about-image-main::before {
       content: '';
       position: absolute;
       inset: 0;
-      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23ffffff;stop-opacity:0.1'/%3E%3Cstop offset='100%25' style='stop-color:%23ffffff;stop-opacity:0'/%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='40' fill='url(%23g)'/%3E%3C/svg%3E");
-      background-size: 200px;
+      z-index: 1;
     }
-
     .about-image-icon {
-      font-size: 5rem;
-      color: rgba(255,255,255,0.3);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;             
+      display: flex;
+      position: relative;
+      z-index: 0;
     }
-
     .about-badge {
       position: absolute;
       bottom: -1.5rem;
       right: -1.5rem;
-      background: var(--color-terracotta);
+      background: none;
       color: var(--color-white);
       padding: 1.5rem;
-      border-radius: 12px;
+      border-radius: 10px;
       text-align: center;
       box-shadow: var(--shadow-lg);
     }
